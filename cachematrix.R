@@ -26,7 +26,7 @@ makeCacheMatrix <- function(matr = matrix())
     getMatInverse <- function() inverse
     
     ## The output is a list of 4 functions to be used in cacheSolve() function
-    list(setMatrix = setMatrix, getMatrix = getMatrix, setMAtInverse = setMatInverse, 
+    list(setMatrix = setMatrix, getMatrix = getMatrix, setMatInverse = setMatInverse, 
          getMatInverse = getMatInverse)
 }
 
@@ -54,6 +54,6 @@ cacheSolve <- function(x, ...)
     
     ## calculates inverse of the matrix and cache's the value
     inv <- solve(data.matrix, ...)
-    x$setMAtInverse(inv)
+    x$setMatInverse(inv)
     inv
 }
